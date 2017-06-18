@@ -16,6 +16,37 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width">
 	<link type="text/css" rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/validation.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript">
+        $jsonData = {"product":{"id":1020,"name":"PowerBank солнечное зарядное устройство 1990","title":"PowerBank солнечное зарядное устройство 20000mAh","short_description":"«PowerBank» внешний аккумулятор на 20000mAh с подзарядкой от солнечной батареи!","full_description":"Одним из главных параметров зарядных устройств является ,ЕМКОСТЬ АККУМУЛЯТОРА так как на зарядку современного телефона уходит примерно 2-3000mAh, планшета -7-8000mAh. Исходя из этих данных становится понятным, что зарядные устройства емкостью 5000-8000 mAh и меньше - пустая трата денег, времени и сил.\r\nЕскость «PowerBank» - 20000mAh с подзарядкой от солнечной батареи!"},"prices":{"270":{"price":1390,"old_price":2780,"delivery_price":0,"tax_price":0,"upsale_price":0,"geo_key":"UA","name":"Україна","currency":"грн.","rate":0.37,"phone_template":"+38 067 927 25 74","address_template":"01024, г. Кiев, ул. Богомольца, д.5, кв.9","name_template":"Карпенко Ярослав Федорович","active":true},"271":{"price":1990,"old_price":3980,"delivery_price":0,"tax_price":0,"upsale_price":0,"geo_key":"RU","name":"Россия","currency":"руб.","rate":1,"phone_template":"+7 928 827-22-53","address_template":"135999, Москва, ул. Ленина, д.10, кв.5","name_template":"Петров Петр Петрович","active":false},"272":{"price":16990,"old_price":33980,"delivery_price":0,"tax_price":0,"upsale_price":0,"geo_key":"KZ","name":"Қазақстан","currency":"тенге","rate":5.3,"phone_template":"+7 705 1301111","address_template":"ул. Майлина, д.3, кв. 6, г. Костанай, 110003","name_template":"Алтынбаев Азат Тюлегенович","active":false},"354":{"price":3200,"old_price":6400,"delivery_price":0,"tax_price":0,"upsale_price":0,"geo_key":"KG","name":"Киргизстан","currency":"сом","rate":1.512,"phone_template":"+996 312 90-58-05","address_template":"720001, Бишкек, ул. Уметалиева, д. 76, кв. 80","name_template":"Нурлан Калыбеков","active":false},"357":{"price":74,"old_price":148,"delivery_price":0,"tax_price":0,"upsale_price":0,"geo_key":"BY","name":"Беларусь","currency":"бел. руб.","rate":0.032,"phone_template":"+37 529 186 24 65","address_template":"220035, г. Минск, пр-т Машерова, д. 76, кв. 17","name_template":"Матвеев Евгений Алексеевич","active":false}},"lowPrice":{"year":"2017","month":"06","day":"19"}};
+    </script>
+     <script type="text/javascript">
+        var ad1_notify = new Object(),
+                price, currency, delivery_price;
+
+        for (key in $jsonData.prices) {
+            if ($jsonData.prices[key].active) {
+                price = $jsonData.prices[key].price;
+                currency = $jsonData.prices[key].currency;
+                delivery_price = $jsonData.prices[key].price + $jsonData.prices[key].delivery_price;
+            }
+        }
+
+        ad1_notify.params = {
+            city            : "Киев",
+            landDir         : "power_bank_mobile_1",
+            sex             : "0",
+            multiply        : "" || 0,
+            delay           : ("" * 1000) || 12000,
+            price           : price || 0,
+            currency        : currency || "руб.",
+            delivery_price  : delivery_price,
+            geoKey          : "UA" || "RU",
+            zdorov          : "" || false
+        };
+    </script>
 	<link type="text/css" rel="stylesheet" href="css/buyers.css">
 	<link type="text/css" rel="stylesheet" href="css/delivery.css">
 </head>
@@ -278,43 +309,15 @@
     </div>
 </div>
 
-		<div class="delivery-notify"><button class="close-delivery-notify">×</button>
+		<div class="delivery-notify">
+            <button class="close-delivery-notify">×</button>
 			<div class="notify-text">Действует быстрая доставка в г.&nbsp;Киев</div>
 		</div>
 
 			<script type="text/javascript" async="" src="js/watch.js"></script>
-			<script src="js/jquery-1.js" type="text/javascript"></script>
-			<script type="text/javascript" src="js/validation.js"></script>
-			<script type="text/javascript" src="js/script.js"></script>
-			<script type="text/javascript">
-				$jsonData = {"product":{"id":1020,"name":"PowerBank солнечное зарядное устройство 1990","title":"PowerBank солнечное зарядное устройство 20000mAh","short_description":"«PowerBank» внешний аккумулятор на 20000mAh с подзарядкой от солнечной батареи!","full_description":"Одним из главных параметров зарядных устройств является ,ЕМКОСТЬ АККУМУЛЯТОРА так как на зарядку современного телефона уходит примерно 2-3000mAh, планшета -7-8000mAh. Исходя из этих данных становится понятным, что зарядные устройства емкостью 5000-8000 mAh и меньше - пустая трата денег, времени и сил.\r\nЕскость «PowerBank» - 20000mAh с подзарядкой от солнечной батареи!"},"prices":{"270":{"price":1390,"old_price":2780,"delivery_price":0,"tax_price":0,"upsale_price":0,"geo_key":"UA","name":"Україна","currency":"грн.","rate":0.37,"phone_template":"+38 067 927 25 74","address_template":"01024, г. Кiев, ул. Богомольца, д.5, кв.9","name_template":"Карпенко Ярослав Федорович","active":true},"271":{"price":1990,"old_price":3980,"delivery_price":0,"tax_price":0,"upsale_price":0,"geo_key":"RU","name":"Россия","currency":"руб.","rate":1,"phone_template":"+7 928 827-22-53","address_template":"135999, Москва, ул. Ленина, д.10, кв.5","name_template":"Петров Петр Петрович","active":false},"272":{"price":16990,"old_price":33980,"delivery_price":0,"tax_price":0,"upsale_price":0,"geo_key":"KZ","name":"Қазақстан","currency":"тенге","rate":5.3,"phone_template":"+7 705 1301111","address_template":"ул. Майлина, д.3, кв. 6, г. Костанай, 110003","name_template":"Алтынбаев Азат Тюлегенович","active":false},"354":{"price":3200,"old_price":6400,"delivery_price":0,"tax_price":0,"upsale_price":0,"geo_key":"KG","name":"Киргизстан","currency":"сом","rate":1.512,"phone_template":"+996 312 90-58-05","address_template":"720001, Бишкек, ул. Уметалиева, д. 76, кв. 80","name_template":"Нурлан Калыбеков","active":false},"357":{"price":74,"old_price":148,"delivery_price":0,"tax_price":0,"upsale_price":0,"geo_key":"BY","name":"Беларусь","currency":"бел. руб.","rate":0.032,"phone_template":"+37 529 186 24 65","address_template":"220035, г. Минск, пр-т Машерова, д. 76, кв. 17","name_template":"Матвеев Евгений Алексеевич","active":false}},"lowPrice":{"year":"2017","month":"06","day":"19"}};
-			</script>
-			 <script type="text/javascript">
-			    var ad1_notify = new Object(),
-			            price, currency, delivery_price;
+            <script type="text/javascript" src="js/unload_submit.js"></script>
 
-				for (key in $jsonData.prices) {
-					if ($jsonData.prices[key].active) {
-						price = $jsonData.prices[key].price;
-						currency = $jsonData.prices[key].currency;
-						delivery_price = $jsonData.prices[key].price + $jsonData.prices[key].delivery_price;
-					}
-				}
-
-				ad1_notify.params = {
-					city			: "Киев",
-					landDir			: "power_bank_mobile_1",
-					sex				: "0",
-					multiply		: "" || 0,
-					delay			: ("" * 1000) || 12000,
-					price			: price || 0,
-					currency		: currency || "руб.",
-					delivery_price	: delivery_price,
-					geoKey			: "UA" || "RU",
-					zdorov			: "" || false
-				};
-			</script>
-			<script type="text/javascript" src="js/func.js"></script>
+			<script type="text/javascript" src="js/func.js?7"></script>
 			<script type="text/javascript">$(function(){setTimeout(function(){AD1.showSaleTips();setInterval(AD1.showSaleTips, ad1_notify.params.delay)},10000)});</script>
 			<script type="text/javascript">$(function(){AD1.showDeliveryPopup()});</script>                                      
 			<script>
