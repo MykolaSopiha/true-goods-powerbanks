@@ -309,15 +309,15 @@
     </div>
 </div>
 
-		<div class="delivery-notify">
-            <button class="close-delivery-notify"  >×</button>
-			<div class="notify-text">Действует быстрая доставка в г.&nbsp;Киев</div>
-		</div>
+        <div class="delivery-notif">
+            <button class="close-delivery-notif">×</button>
+            <div class="notif-text">Действует быстрая доставка в г.&nbsp;Киев</div>
+        </div>
 
         <script type="text/javascript">
-            $('.close-delivery-notify').on('click', function () {
-                                console.log('hello');
-                     $('.delivery-notify').css('display','none');
+            $('.close-delivery-notif').on('click', function () {
+                                
+                     $('.delivery-notif').css('display','none');
              });
         </script>
 

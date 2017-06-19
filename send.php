@@ -56,8 +56,6 @@ $headers .= "X-Mailer: PHP/" . phpversion();
 if(!empty($_POST['name']) && !empty($_POST['phone'])) {
     
 mail($to1, $subject, $message, $headers);
-	$name = 1;
-	$name = 2;
 
 }
 
